@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url(Assets/pexels-paul-blessington-149060446-12740675.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+header{
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width:80px;
+    height: 80px;
+}
+
+.weather-display{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    position:absolute;
+    right: 0;
+    top: 0;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    width: 500px;
+    height: 100vh;
+    padding: 4em;
+
+}
+
+.location-search-visible{
+    position: relative;
+}
+
+.location-search-visible input, .location-search-hidden input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #b3b3b3;
+    padding-bottom: 10px;
+    background-color: transparent;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.location-search-visible input:focus, .location-search-hidden input:focus{
+    outline: none;
+    background-color: transparent;
+}
+
+.search-icon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.location-search-hidden .search-icon{
+    position: absolute;
+    top: 8%;
+    right: 10%;
+}
+
+.location-search-visible input::placeholder, .location-search-hidden input::placeholder {
+    color: #b3b3b3;
+  }
+
+  .location-search-hidden{
+    display: none;
+  }
+
+.details{
+    padding-top: 2em;
+}
+
+.details h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.details p{
+    font-size: 1.3rem;
+    color: #000;
+    padding-top: 1em;
+}
+
+.city-details{
+    padding-bottom: 2em;
+}
+
+hr{
+    background-color: #b3b3b3;
+}
+
+.weather-details{
+    padding: 2em 0;  
+}
+
+.weather-icons{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.city-temp-details{
+    padding: 3em;
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;    
+}
+
+.city-temp-details h3{
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+#selected-city-name{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#feels-like, #date{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.city-temp-details img{
+    width: 50px;
+    height: 50px;
+}
+
+
+@media(max-width:992px){
+
+    body {
+        background-size: cover; 
+        height: 100vh; 
+        min-height: 100vh;
+    }
+
+    .weather-display{
+        right: 0;
+        left: 0;
+        top: 60%;
+        width: 100vw;
+        
+    }
+
+    .city-temp-details{
+        top: 5%;  
+    }
+
+    .weather-display, .city-temp-details{
+        text-align: center;
+    }
+
+    .location-search-visible{
+        display: none;
+    }
+
+    .location-search-hidden{
+        display: block;
+    }
+
+  
+
+}
