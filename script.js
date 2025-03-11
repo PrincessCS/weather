@@ -30,7 +30,8 @@ function getCityWeather(e) {
         return;
     }
 
-    const url = `/api/getWeather?city=${city}`; 
+    const url = `/.netlify/functions/getWeather?city=${city}`;
+
 
     fetch(url)
     .then(response => {
