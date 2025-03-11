@@ -1,5 +1,15 @@
+
 {
   "dependencies": {
     "node-fetch": "^3.3.2"
-  }
+  },
+
+  "scripts": {
+  "build": "echo 'Skipping build step'"
 }
+}
+
+
+
+
+

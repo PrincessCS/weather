@@ -1,6 +1,5 @@
 [build]
-  command = "npm run build"
-  publish = "dist"  # Change this if your build output folder is different
+  command = "echo 'No build step required'"
 
 [functions]
   directory = "netlify/functions"
